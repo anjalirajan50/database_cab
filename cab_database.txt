@@ -1,0 +1,33 @@
+CREATE DATABASE cab;
+USE cab;
+
+create table cab(
+cab_no int not null,
+cab_name varchar(100) not null,
+cab_des varchar(100) not null,
+cab_cap int not null
+);
+
+
+
+create table passenger(
+id int  not null,
+name varchar(100) not null,
+username varchar(100) not null,
+email varchar(100) not null,
+password varchar(100) not null,
+mobile int not null,
+address varchar(100) not null,
+dob date not null,
+nationality varchar(100) not null,
+gender varchar(50) not null
+);
+
+create table booking(
+id int primary key auto_increment,
+pickup varchar(100) not null,
+destination varchar(100) not null,
+cab_date varchar(50) not null,
+cab_time time not null,
+cost int not null
+);
